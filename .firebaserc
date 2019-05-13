@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "api-project-foxbeckya",
+    "firebase-example-api-project": "api-project-foxbeckya"
+  }
+}
