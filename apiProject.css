@@ -1,0 +1,25 @@
+body{
+  background-image: url("apiProjectAssets/amsterdam-ancient-architecture-533942.jpg");
+    background-size: 100%; 
+    z-index: -2;
+  }
+
+  .photo{
+      opacity:.2;
+  }
+
+  h1{
+      color:lightgray;
+  }
+
+  form{
+      color:lightgrey;
+  }
+
+  .submit{
+      background-color: lightgray;
+  }
+
+  .maker{
+      background-color: lightgray;
+  }
