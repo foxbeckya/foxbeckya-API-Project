@@ -1,15 +1,13 @@
 body{
-  background-image: url("apiProjectAssets/amsterdam-ancient-architecture-533942.jpg");
+  background-image: url(apiProjectAssets/amsterdam-architecture-building-60247.jpg);
     background-size: 100%; 
-    z-index: -2;
-  }
-
-  .photo{
-      opacity:.2;
+    z-index: -1;
+    font-family: 'Montserrat', sans-serif;
   }
 
   h1{
       color:lightgray;
+      text-align: center;
   }
 
   form{
@@ -18,8 +16,27 @@ body{
 
   .submit{
       background-color: lightgray;
+      margin-left: 25px;
   }
 
   .maker{
       background-color: lightgray;
   }
+
+.list{
+    list-style: none;
+    list-style-position: inside;
+    text-indent: -1em;
+    padding-left: 1em;
+}
+ a{
+    color:white;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 50px;
+    margin-bottom: 200px;
+    z-index: 1;
+    text-shadow: 2px lightgray;
+    line-height: 12pt;
+    text-decoration: none;
+ }

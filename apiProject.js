@@ -2,33 +2,33 @@ const baseURL = ("https://www.rijksmuseum.nl/api/en/collection");
 const key = 'fpGQTuED';
 const searchForm = document.querySelector('form');
 const artList = document.querySelector('ul');
-let url;
+let site;
 
 searchForm.addEventListener('submit', fetchResults);
 
 function fetchResults(e){
     e.preventDefault();
 
-    url = `${baseURL}?q=${maker.value}&key=${key}&format=json`;
-    console.log(url);
+    site = `${baseURL}?q=${maker.value}&key=${key}&format=json`;
+    console.log(site);
 
-        fetch(url)
+        fetch(site)
         .then(data=> data.json())
-        .then (data=> {
-            displayResults(data.names);
-            console.log(data.names);
+        .then (json=> {
+            displayResults(json);
+            console.log(json);
         });
         }
 
 function displayResults(json){
  
-  console.log(json); //Brie had [0] after json?
+  console.log(json.artObjects)
+  let photo = json.artObjects;
+
 
 //artObjects.title   artObjects.webImage.url  artObjects.principalOrFirstMaker
-    for(i = 0; i < json.length; i++) { //this is wrong. it doesnt know what json is.
-        let art = json[i].art; //it also seems to not like this [i].
-let artItem = document.createElement('li');
-artItem.innerText = art;
-            artList.appendChild(artItem); 
-          }}
-
+    for(let i = 0; i < photo.length; i++) { 
+      let artItem = document.createElement('li');
+      artItem.innerHTML += '<a href="'+photo[i].webImage.url+'">'+photo[i].title+'</a>';
+      artList.appendChild(artItem); 
+    }}
